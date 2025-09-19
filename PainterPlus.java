@@ -40,9 +40,34 @@ public void paintDonut(String color){
     turnLeft();
     turnLeft();
   }
-  
- 
+   /* ------------------ paintRow ------------------
+   Adapted from BackgroundPainter, used in GroundPainter
+   to paint the grass
+   * --------------------------------------------------
+   */
+   public void paintRow(String color) {
+    while (canMove()) {
+      paint(color);
+      move();
+    }
+    paint(color);
+  }
+   /* ------------------ moveToCorner ------------------
+ Adapted from BackgroundPainter in order to organize 
+ the painters
+   * --------------------------------------------------
+   */
+ public void moveToCorner() {
+    while (canMove()) {
+      move();
+    }
+    
+    turnRight();
 
+    while (canMove()) {
+      move();
+    }
+  }
   /* ------------------ paintSquare ------------------
    * paintSquare is a helper method in the painterPlus
    class in order to help the paintWindows method in
@@ -64,3 +89,5 @@ public void paintSquare(String color){
   turnRight();
  }
 }
+
+
