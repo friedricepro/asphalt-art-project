@@ -1,5 +1,5 @@
 import org.code.neighborhood.*;
-public class GroundPainter extends BackgroundPainter{
+public class GroundPainter extends PainterPlus{
 
 
   /* ------------------ paintGrass ------------------
